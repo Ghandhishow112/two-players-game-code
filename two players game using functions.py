@@ -15,13 +15,13 @@ def players(Player_1 , Player_2):
     print(" player two wins ")
   else: 
     pass
-  count_player1=0   
+  count_player1=1   
   while (Player_1 !=Player_2):
     Player_2=input(" player two :Guess the number :")
     count_player1+=1
     if count_player1==math.inf:
             break
-  print(f"player one guessed it right , the number is {Player_1} it took you {count_player1} times to get it")  
+  print(f"player two  guessed it right , the number is {Player_1} it took player two {count_player1} trials to get it")  
     
   Player_2=input(" player two : Enter your number:")
   print(Player_2)
@@ -29,25 +29,25 @@ def players(Player_1 , Player_2):
   print(Player_1)
 
   if (Player_2==Player_1):
-    print("player two wins")
+    print("player one wins")
   else: 
     pass
-  count_player2=0   
+  count_player2=1  
   while (Player_2 !=Player_1):
     Player_1=input(" player one : Guess the number :")
     count_player2+=1
     if count_player1==math.inf:
             break
-  print(f"player two  guessed it right , the number is {Player_2} it took you {count_player2} times to get it") 
+  print(f"player one  guessed it right , the number is {Player_2} it took player one {count_player2} trials to get it") 
 
   if count_player1 < count_player2 :
-    print()
-    print("it took player one to guess the number with a lesser number of trials : player one wins and crowned mastermind")
+  
+    print("it took player two to guess the number with a lesser number of trials : player two wins and crowned mastermind")
   elif count_player2 == count_player1 :
     print("its a tie")
   else :
-    print("it took player two to guess the number with a lesser number of trials : player two wins and crowned mastermind")
-  value={"first player count ": count_player1, "second Player count ": count_player2}
+    print("it took player one to guess the number with a lesser number of trials : player one wins and crowned mastermind")
+  value={"second player count ": count_player1, "first Player count ": count_player2}
   return value
 player_ = players(Player_1=input("player one:  Enter your number :"),Player_2=input(" player two :Guess the number :") )
 print(player_)
